@@ -16,5 +16,5 @@ RUN chmod +x start.sh
 # Expose port
 EXPOSE 8080
 
-# Run the startup script
-CMD ["./start.sh"]
+# Run the startup script (shell form to invoke shell)
+CMD ./start.sh
