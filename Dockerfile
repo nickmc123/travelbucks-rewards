@@ -4,10 +4,13 @@ WORKDIR /app
 
 # Copy files
 COPY requirements.txt .
-COPY main.py .
+COPY *.py .
 
 # Install dependencies
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Run the app directly with Python (handles PORT env var internally)
-CMD python main.py
+# Expose port
+EXPOSE 8080
+
+# Run the application directly
+CMD ["python", "main.py"]
